@@ -6,6 +6,7 @@ const divide = document.querySelector('.divide');
 const multiply = document.querySelector('.multiply');
 const answer = document.querySelector('.answer');
 const buttons = document.querySelector('.buttons');
+const equally = document.querySelector('.equally');
 
 const  plusFun = () => {
   let numOne = parseInt(areaOne.value);
@@ -13,10 +14,13 @@ const  plusFun = () => {
 
   let sum = numOne + numTwo;
 
-  answer.innerText = sum;
+  equally.addEventListener('click', () => {
+    answer.innerText = sum
 
-  areaOne.value = '';
-  areaTwo.value = '';
+    areaOne.value = '';
+    areaTwo.value = '';
+  })
+
 }
 
 const  minusFun = () => {
@@ -25,10 +29,12 @@ const  minusFun = () => {
 
   let sum = numOne - numTwo;
 
-  answer.innerText = sum;
+  equally.addEventListener('click', () => {
+    answer.innerText = sum
 
-  areaOne.value = '';
-  areaTwo.value = '';
+    areaOne.value = '';
+    areaTwo.value = '';
+  })
 }
 
 const  divideFun = () => {
@@ -37,10 +43,12 @@ const  divideFun = () => {
 
   let sum = numOne / numTwo;
 
-  answer.innerText = sum;
+  equally.addEventListener('click', () => {
+    answer.innerText = sum
 
-  areaOne.value = '';
-  areaTwo.value = '';
+    areaOne.value = '';
+    areaTwo.value = '';
+  })
 }
 
 const  multiplyFun = () => {
@@ -49,12 +57,27 @@ const  multiplyFun = () => {
 
   let sum = numOne * numTwo;
 
-  answer.innerText = sum;
+  equally.addEventListener('click', () => {
+    answer.innerText = sum
 
-  areaOne.value = '';
-  areaTwo.value = '';
+    areaOne.value = '';
+    areaTwo.value = '';
+  })
 }
-plus.addEventListener('click', plusFun);
-minus.addEventListener('click', minusFun);
-divide.addEventListener('click', divideFun);
-multiply.addEventListener('click', multiplyFun);
+
+buttons.addEventListener('click', e => {
+  if (e.target.classList.contains('plus')) {
+    plusFun();
+  } else if (e.target.classList.contains('minus')) {
+    minusFun();
+  } else if (e.target.classList.contains('divide')) {
+    divideFun();
+  } else if (e.target.classList.contains('multiply')) {
+    multiplyFun();
+  }
+});
+
+// plus.addEventListener('click', plusFun);
+// minus.addEventListener('click', minusFun);
+// divide.addEventListener('click', divideFun);
+// multiply.addEventListener('click', multiplyFun);
