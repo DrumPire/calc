@@ -23,6 +23,9 @@ body {
   font-weight: 900;
   min-width: 50px;
 }
+.area-one {
+  margin-bottom: 20px;
+}
 .buttons {
   margin-top: 25px;
   display: flex;
@@ -38,4 +41,10 @@ button {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+}
+.do {
+  position: absolute;
+  top: 206px;
+  font-weight: 900;
+  font-size: 20px;
 }

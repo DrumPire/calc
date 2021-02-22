@@ -7,6 +7,7 @@ const multiply = document.querySelector('.multiply');
 const answer = document.querySelector('.answer');
 const buttons = document.querySelector('.buttons');
 const equally = document.querySelector('.equally');
+const doing = document.querySelector('.do');
 
 const  plusFun = () => {
   let numOne = parseInt(areaOne.value);
@@ -19,6 +20,7 @@ const  plusFun = () => {
 
     areaOne.value = '';
     areaTwo.value = '';
+    doing.innerText = '';
   })
 
 }
@@ -34,6 +36,7 @@ const  minusFun = () => {
 
     areaOne.value = '';
     areaTwo.value = '';
+    doing.innerText = '';
   })
 }
 
@@ -48,6 +51,7 @@ const  divideFun = () => {
 
     areaOne.value = '';
     areaTwo.value = '';
+    doing.innerText = '';
   })
 }
 
@@ -62,17 +66,22 @@ const  multiplyFun = () => {
 
     areaOne.value = '';
     areaTwo.value = '';
+    doing.innerText = '';
   })
 }
 
 buttons.addEventListener('click', e => {
   if (e.target.classList.contains('plus')) {
+    doing.innerText = '+';
     plusFun();
   } else if (e.target.classList.contains('minus')) {
+    doing.innerText = '-';
     minusFun();
   } else if (e.target.classList.contains('divide')) {
+    doing.innerText = '/';
     divideFun();
   } else if (e.target.classList.contains('multiply')) {
+    doing.innerText = 'x';
     multiplyFun();
   }
 });
