@@ -9,6 +9,13 @@ const buttons = document.querySelector('.buttons');
 const equally = document.querySelector('.equally');
 const doing = document.querySelector('.do');
 
+
+const clearArea = () => {
+  areaOne.value = '';
+  areaTwo.value = '';
+  doing.innerText = '';
+}
+
 const  plusFun = () => {
   let numOne = parseInt(areaOne.value);
   let numTwo = parseInt(areaTwo.value);
@@ -18,9 +25,7 @@ const  plusFun = () => {
   equally.addEventListener('click', () => {
     answer.innerText = sum
 
-    areaOne.value = '';
-    areaTwo.value = '';
-    doing.innerText = '';
+    clearArea();
   })
 
 }
@@ -34,9 +39,7 @@ const  minusFun = () => {
   equally.addEventListener('click', () => {
     answer.innerText = sum
 
-    areaOne.value = '';
-    areaTwo.value = '';
-    doing.innerText = '';
+    clearArea();
   })
 }
 
@@ -49,9 +52,7 @@ const  divideFun = () => {
   equally.addEventListener('click', () => {
     answer.innerText = sum
 
-    areaOne.value = '';
-    areaTwo.value = '';
-    doing.innerText = '';
+    clearArea();
   })
 }
 
@@ -64,9 +65,7 @@ const  multiplyFun = () => {
   equally.addEventListener('click', () => {
     answer.innerText = sum
 
-    areaOne.value = '';
-    areaTwo.value = '';
-    doing.innerText = '';
+    clearArea();
   })
 }
 
